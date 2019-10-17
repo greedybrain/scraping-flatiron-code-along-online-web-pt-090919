@@ -30,7 +30,11 @@ class Scraper
   
   def make_courses
     course_instances = get_courses.collect do |course|
-      binding.pry
+      new_inst = Course.new 
+      new_inst.title = course.css('h2').text 
+      new_inst.schedule = course.css('em.date').text
+      new_inst.description = course.css('p').text
+      # binding.pry
     end
   end
   

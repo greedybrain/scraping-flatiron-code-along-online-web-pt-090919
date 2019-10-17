@@ -29,11 +29,8 @@ class Scraper
   end
   
   def make_courses
-    course_instances = get_courses.collect do |course| 
-      @title = course.css('h2').text
-      # @schedule = course.css('em.date').text
-      # @description = course.css('p').text
-      # binding.pry
+    course_instances = get_courses.collect do |course|
+      binding.pry
     end
   end
   

@@ -34,7 +34,7 @@ class Scraper
       new_inst.title = course.css('h2').text 
       new_inst.schedule = course.css('em.date').text
       new_inst.description = course.css('p').text
-      binding.pry
+      # binding.pry
     end
   end
   
